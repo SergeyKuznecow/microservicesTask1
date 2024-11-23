@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>WELCOME!!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирование элементов */
+            justify-content: center; /* Выравнивание по центру */
+            height: 100vh; /* Полная высота вьюпорта */
+            margin: 0; /* Удаление отступов по умолчанию */
+            background-color: #F4F6F7; /* Цвет фона страницы */
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 100px; /* Размер шрифта */
+            font-weight: bold; /* Жирный текст */
+            color: #2980B9; /* Цвет текста */
+            background: beige; /* Цвет фона */
+            padding: 40px; /* Отступы вокруг текста */
+            border-radius: 10px; /* Скругление углов */
+            display: inline-block; /* Инлайн-блок для центрирования */
+            text-align: center; /* Центрирование текста */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+            width: 800px; /* Ширина логотипа */
+        }
+
+        .button {
+            margin-top: 20px; /* Отступ сверху для кнопки */
+            padding: 15px 25px; /* Отступы внутри кнопки */
+            font-size: 20px; /* Размер шрифта кнопки */
+            color: white; /* Цвет текста кнопки */
+            background-color: #3498DB; /* Цвет фона кнопки */
+            border: none; /* Удаление рамки */
+            border-radius: 5px; /* Скругление углов кнопки */
+            cursor: pointer; /* Изменение курсора при наведении */
+            transition: background-color 0.3s; /* Плавный переход цвета фона */
+        }
+
+        .button:hover {
+            background-color: #2980B9; /* Темнее фон при наведении */
+        }
+    </style>
+</head>
+<body>
+<header>
+    Welcome!!!
+</header>
+<div class="logo" th:text="'Task N 1'">HR</div>
+<button class="button" onclick="redirectToUsersList()">Click Me</button>
+<br><br>
+<a href="users/list"> <input type="submit" value="Get Down To Work"> </a>
+
+<script>
+    function redirectToUsersList() {
+        window.location.href = "users/list";
+    }
+</script>
+</body>
+</html>
